@@ -1,15 +1,54 @@
 import React from 'react'
 
 const PrayerTimes = (props) => {
+let display;
+  if (props.prayers.cityname){
+display = <div><p>The prayer times in {props.prayers.cityname}, {props.prayers.country}  </p><p><b>Today's Date:</b> {props.prayers.date} </p> </div>
+  }
   return (
-    <div>
-    
-        <p>Fajr Prayer:   {props.prayers.fajr}   </p>
-        <p>Dhuhr Prayer:  {props.prayers.dhuhr}  </p>
-        <p>Asr Prayer:    {props.prayers.asr}    </p>
-        <p>Maghrib Prayer:{props.prayers.maghrib}</p>
-        <p>Isha Prayer:   {props.prayers.isha}   </p>
-        <p>Sunrise Time (Shurooq):  {props.prayers.shurooq}</p>
+    <div className="prayerTimes">
+{display}
+
+     <table width="40%">
+         <tr>
+            <th>Prayer</th>
+            <th>Time</th>
+         </tr>
+
+        <tr>
+        <td>Fajr Prayer </td>
+        <td>{props.prayers.fajr} </td>
+        </tr>
+
+        <tr>
+         <td width="70%">Dhuhr Prayer</td> 
+         <td width="30%"> {props.prayers.dhuhr}  </td>
+         </tr>
+
+         <tr>
+         <td>Asr Prayer </td>    
+         <td> {props.prayers.asr}    </td>
+        </tr>
+
+        <tr>
+         <td>Maghrib Prayer</td> 
+         <td> {props.prayers.maghrib}</td>
+         </tr>
+
+         <tr>
+         <td>Isha Prayer </td>
+         <td> {props.prayers.isha}   </td>
+         </tr>
+
+         <tr>
+         <td>Sunrise Time (Shurooq) </td>  
+         <td> {props.prayers.shurooq}</td>
+         </tr>
+
+
+        </table>
+
+        
        
     </div>
   )

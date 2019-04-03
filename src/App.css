@@ -1,33 +1,207 @@
-.App {
+  /* .App {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+  }
+
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+
+body{
+
+  /* background-image: url("https://t3.ftcdn.net/jpg/02/23/04/46/240_F_223044648_gJt6PUqQzv8ofWbc0i0339P9GRbxNs7u.jpg"); */
+  background-image: url("https://ak7.picdn.net/shutterstock/videos/1007908897/thumb/1.jpg");
+  background-repeat: repeat;
+  background-size: 1300px 750px; 
+  /* opacity: 0.7;
+  filter: alpha(opacity=50); */
+  /* font-family:'Marcellus SC', serif; */
+}
+
+.prayerTimes{
+  color:black;
+  font-family: Marcellus SC, serif;
+  margin: 50px;
+  text-align:center;
+  
+}
+
+.prayerTimes h1{
+  /* text-align: center; */
+}
+
+table, th, td {
+  border: 2px solid rgb(151, 112, 60);
   text-align: center;
+  height: 40px;
+  margin-left:auto; margin-right:auto;
+
+  
+
+  
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+
+  /* text-align: center; */
+
+/* @import url('https://fonts.googleapis.com/css?family=Patua+One');
+*{
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+  position:absolute;
+} */
+
+.container{
+ 
+  margin: 0 auto;
+
+  width:310px;
+  height:290px;
+  
+  background-image: url("http://www.clker.com/cliparts/d/e/2/a/12983844231644038661Windrose_ENG_web.svg.med.png")
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/* .compass{
+  background-color:transparent;
+  border:4px solid #2d3436;
+  border-radius:50%;
+} */
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* .lines{
+  width:4px;
+  height:100%;
+  background-color:#B6E3FC;
+  z-index:-1;
+  &:nth-child(5n-4){
+    width: 5px;
+    background-color:#FF5252;
   }
-  to {
-    transform: rotate(360deg);
+} */
+
+
+
+/* @for $i from 1 to 60{
+  .lines:nth-child(#{$i}){
+     transform: rotate(#{( 6 * $i) - 5}deg) 
+  }
+} */
+.directions{
+  width:90%;
+  height:90%;
+ 
+  border-radius:50%;
+  text-align:center;
+  font-size:25px;
+  font-family: 'Patua One', cursive;
+  color:#395060;
+  z-index:1;
+}
+  .E{
+    position:absolute;
+    left:-85%;
+    width:50px;
+    height:30px;
+  }
+
+  .S{
+    top:70%;
+    width:30px;
+    height:30px;
+  }
+
+
+  .N{
+  
+    top:-80%;
+    width:30px;
+    height:30px;
+  }
+
+  .W{
+    left:80%;
+    width:30px;
+    height:30px;
+  }
+
+
+.needle{
+  width:40px;
+  height:170px;
+  /* background: chartreuse; */
+  background-image: url("https://unixtitan.net/images/needle-transparent-compass-6.png");
+background-size:600% ;
+background-repeat: no-repeat;
+background-position-x: -100px;
+background-position-y: -40px;
+
+
+/* border : 5px solid rgb(255, 0, 0); */
+position: relative;
+left: 128px;
+top : 50px;
+z-index:1;
+
+}
+ 
+
+
+  /* .circle{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background-color:white;
+    border:2px solid #30336b;
+  } */
+
+
+.cover{
+  background-color:white;
+  width:90%;
+  height:90%;
+  border-radius:50%;
+}
+
+@keyframes rotate{
+  0%{
+    transform:rotate(100deg);
+  }
+  50%{
+    transform:rotate(160deg);
+  }
+  100%{
+    transform:rotate(130deg);
   }
 }
+
+
+
