@@ -11,7 +11,7 @@ Starting with writing the ideas and sketching the page design on the paper, in o
 ---
 
 ## **-  Installation instructions:**
-https://reemarayes.github.io/
+http://Reemarayes.github.io/project_two
 
 ---
 
