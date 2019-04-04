@@ -5,11 +5,6 @@ import PrayerTimes from './PrayerTimes';
 import Compass from './Compass';
 // import prayerTimes from './prayerTimes'
 
-// input ==> takes value of input and passes it as argument to the on click function 
-// Button
-// onClick ==> calls function and passes argument 
-// argument ==> inserted within url as city name 
-
 
 class App extends Component {
 
@@ -25,7 +20,7 @@ class App extends Component {
     this.setState(data)
   }
 
-  submitHandler = () => { //this needs to change to click function 
+  submitHandler = () => {
     axios.get(`https://cors-anywhere.herokuapp.com/https://muslimsalat.com/${this.state.cityname}/daily.json?key=9ab533462042508648d35fda77c55117`)
       .then(response => {
         console.log(response.data.items[0]);
@@ -56,9 +51,7 @@ class App extends Component {
   render() {
     return (
       <div >
-        <div className="hangingLights">
-          {/* <img src="https://www.shariahboard.org/images/qandeel1.png" /> */}
-        </div>
+
 
         <div className="prayerTimes">
           <h1> Prayer Times </h1>
@@ -66,11 +59,7 @@ class App extends Component {
           <input name="cityname"
             value={this.state.cityname} onChange={this.changeHandler} />
 
-
-
           <button onClick={this.submitHandler}> Search </button>
-
-          {/* <img src="http://icons.iconarchive.com/icons/icons-land/sport/256/Compass-icon.png" /> */}
 
           <PrayerTimes prayers={this.state} />
           <br></br>
@@ -100,56 +89,32 @@ class App extends Component {
 
           <br></br> <br></br>
 
-          {/* .container
-  .compass
-    .directions
-      .E
-        p E
-      .W
-        p W
-      .S
-        p S
-      .N
-        p N
-    //- -for(var a=0;a<60;a++)
-      .lines
-    .cover
-    .needle
-      .main
-      .circle */}
-
-
 
           <div className="container">
             <div className="compass">
-           
 
               <div className="cover">
               </div>
-{/* style = {{transform: `rotate(${Number(this.state.qibla) +90}deg)` }*/}
-              <div className="needle" style = {{transform: `rotate(${Number(this.state.qibla) +90}deg)` }} >
+
+              <div className="needle" style={{ transform: `rotate(${Number(this.state.qibla) + 90}deg)` }} >
 
                 <div className="main">
                 </div>
-               
+
               </div>
-
-
-
-
-
             </div>
           </div>
 
 
           <br></br><br></br><br></br>
           <img src="https://bethanmaybooks.files.wordpress.com/2018/08/pagebreak.png" width="800x700" />
-          <br></br> <br></br><br></br>
+          <br></br> <br></br>
 
 
           <h1>Watch Live Video of Makkah, Saudi Arabia </h1>
+          <br></br>
           {/* youtubelink */}
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/7BE8NxMhwas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="860" height="400" src="https://www.youtube.com/embed/7BE8NxMhwas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
 
